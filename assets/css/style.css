@@ -12,12 +12,17 @@
   --blue-light: #EBF2FA;
   --saffron: #D97706;
   --saffron-dark: #B45309;
+  /* Saffron variants that meet 4.5:1 as text: on light bg and on the footer blue */
+  --saffron-text: #B45309;
+  --saffron-on-blue: #F59E0B;
   --green: #059669;
   --green-soft: #ECFDF5;
+  /* Darker green for small text on the soft green background (4.5:1) */
+  --green-text: #047857;
   --red: #DC2626;
   --text: #1A1A2E;
   --text-2: #4A5568;
-  --text-3: #718096;
+  --text-3: #5F6C7F;
   --border: #E2E8F0;
   --border-dark: #CBD5E0;
   --shadow-sm: 0 1px 2px rgba(26, 54, 93, 0.06);
@@ -89,7 +94,7 @@ p { margin: 0 0 1em; }
   text-decoration: none; color: var(--blue); font-weight: 800;
   font-size: 1.2rem; letter-spacing: -0.02em;
 }
-.site-logo .logo-in { color: var(--saffron); }
+.site-logo .logo-in { color: var(--saffron-text); }
 .site-nav { display: none; align-items: center; gap: 4px; }
 .site-nav a {
   color: var(--text-2); text-decoration: none; font-weight: 500;
@@ -180,7 +185,7 @@ p { margin: 0 0 1em; }
 .section-head p { color: var(--text-2); }
 .section-kicker {
   display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--saffron); margin-bottom: 8px;
+  text-transform: uppercase; color: var(--saffron-text); margin-bottom: 8px;
 }
 
 /* ── Cards ─────────────────────────────────────────────── */
@@ -209,7 +214,7 @@ p { margin: 0 0 1em; }
 .tool-card.featured .tool-icon { background: #FEF3E2; color: var(--saffron); }
 .tool-card .featured-badge {
   position: absolute; top: -12px; left: 20px;
-  background: var(--saffron); color: #fff; font-size: 0.72rem; font-weight: 700;
+  background: var(--saffron-text); color: #fff; font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px;
 }
 @media (min-width: 980px) { .tool-card.featured { grid-column: span 3; flex-direction: row; align-items: center; gap: 24px; padding: 28px 32px; }
@@ -226,7 +231,7 @@ p { margin: 0 0 1em; }
 .guide-card p { margin: 0 0 10px; color: var(--text-2); font-size: 0.92rem; }
 .guide-card .updated-tag {
   display: inline-block; font-size: 0.75rem; font-weight: 600;
-  color: var(--green); background: var(--green-soft);
+  color: var(--green-text); background: var(--green-soft);
   padding: 2px 10px; border-radius: 99px;
 }
 
@@ -344,7 +349,7 @@ p { margin: 0 0 1em; }
 .result-table th:first-child, .result-table td:first-child { text-align: left; }
 .result-table td { font-family: var(--font-mono); }
 .result-table td:first-child { font-family: var(--font-sans); font-weight: 500; }
-.result-table .pos { color: var(--green); }
+.result-table .pos { color: var(--green-text); }
 .result-table .neg { color: var(--red); }
 .result-table tr.total-row td { font-weight: 700; border-top: 2px solid var(--border-dark); border-bottom: none; background: var(--bg-soft); }
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -382,7 +387,7 @@ p { margin: 0 0 1em; }
 .article-body table td.num, .article-body table th.num { text-align: right; font-family: var(--font-mono); font-size: 0.88rem; }
 .article-meta { color: var(--text-3); font-size: 0.88rem; margin-bottom: 24px; }
 .article-meta .updated-tag {
-  display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--green);
+  display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--green-text);
   background: var(--green-soft); padding: 2px 10px; border-radius: 99px; margin-right: 8px;
 }
 .cite { font-size: 0.85rem; color: var(--text-3); }
@@ -439,6 +444,7 @@ p { margin: 0 0 1em; }
 .footer-brand { grid-column: 1 / -1; }
 @media (min-width: 820px) { .footer-brand { grid-column: auto; } }
 .footer-brand .site-logo { color: #fff; margin-bottom: 12px; }
+.footer-brand .site-logo .logo-in { color: var(--saffron-on-blue); }
 .footer-brand p { font-size: 0.88rem; max-width: 320px; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.15); padding: 20px 0;

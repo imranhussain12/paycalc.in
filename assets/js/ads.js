@@ -33,12 +33,28 @@ var ADSENSE_CONFIG = {
 (function () {
   'use strict';
 
-  /* Always load the base AdSense script (required for review + Auto ads) */
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CONFIG.PUBLISHER_ID;
-  s.crossOrigin = 'anonymous';
-  document.head.appendChild(s);
+  /* Load the base AdSense script (required for review + Auto ads), but keep it
+     off the critical path: it is ~250KB of third-party JS that must not delay
+     first paint or the calculator becoming interactive. */
+  function loadAdSense() {
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CONFIG.PUBLISHER_ID;
+    s.crossOrigin = 'anonymous';
+    document.head.appendChild(s);
+  }
+
+  function scheduleAdSense() {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadAdSense, { timeout: 3000 });
+    } else {
+      setTimeout(loadAdSense, 1200);
+    }
+  }
+
+  if (document.readyState === 'complete') scheduleAdSense();
+  else window.addEventListener('load', scheduleAdSense);
 
   function initSlots() {
     var slots = document.querySelectorAll('.ad-slot');
