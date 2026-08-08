@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fitment Factor Explained — How 2.57, 2.86 & 3.00 Are Derived</title>
+<meta name="description" content="What the fitment factor is, how 2.57 was derived for the 7th CPC, what 2.86 would mean for the 8th CPC, and worked examples for every pay level."/>
+<link rel="canonical" href="https://paycalc.in/guides/fitment-factor-explained.html"/>
+<meta property="og:title" content="Fitment Factor Explained — How 2.57, 2.86 & 3.00 Are Derived"/>
+<meta property="og:description" content="What the fitment factor is, how 2.57 was derived for the 7th CPC, what 2.86 would mean for the 8th CPC, and worked examples for every pay level."/>
+<meta property="og:url" content="https://paycalc.in/guides/fitment-factor-explained.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="PayCalc.in"/>
+<meta property="og:image" content="https://paycalc.in/assets/images/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Fitment Factor Explained — How 2.57, 2.86 & 3.00 Are Derived"/>
+<meta name="twitter:description" content="What the fitment factor is, how 2.57 was derived for the 7th CPC, what 2.86 would mean for the 8th CPC, and worked examples for every pay level."/>
+<meta name="twitter:image" content="https://paycalc.in/assets/images/og-image.png"/>
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paycalc.in/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://paycalc.in/#guides"},{"@type":"ListItem","position":3,"name":"Fitment Factor, Explained","item":"https://paycalc.in/guides/fitment-factor-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is the Fitment Factor? 2.57 vs 2.86 vs 3.00","description":"How the pay commission fitment factor works, with derivations and worked examples.","url":"https://paycalc.in/guides/fitment-factor-explained.html","datePublished":"2026-08-01","dateModified":"2026-08-08","author":{"@type":"Organization","name":"PayCalc.in","url":"https://paycalc.in"},"publisher":{"@type":"Organization","name":"PayCalc.in","logo":{"@type":"ImageObject","url":"https://paycalc.in/assets/images/favicon.svg"}},"image":"https://paycalc.in/assets/images/og-image.png","inLanguage":"en-IN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the fitment factor in simple words?","acceptedAnswer":{"@type":"Answer","text":"It is the single multiplier applied to your current basic pay to get your new basic pay when a pay commission takes effect. If the factor is 2.86 and your basic is ₹50,000, your new basic is ₹1,43,000."}},{"@type":"Question","name":"Why was the 7th CPC factor 2.57?","acceptedAnswer":{"@type":"Answer","text":"On 1 January 2016 DA stood at 125%. Merging that DA alone required a factor of 2.25 (basic × 2.25 = basic + 125% DA). The commission then granted a real increase of about 14.3%, giving 2.25 × 1.143 ≈ 2.57."}},{"@type":"Question","name":"What factor do unions demand for the 8th CPC?","acceptedAnswer":{"@type":"Answer","text":"The National Council (JCM) Staff Side has demanded a minimum of 2.86, arguing the minimum pay should rise from ₹18,000 to at least ₹51,480."}},{"@type":"Question","name":"Does a bigger fitment factor mean a proportionally bigger raise?","acceptedAnswer":{"@type":"Answer","text":"Not proportionally, because part of the factor only replaces the DA you already receive. At 60% DA, a factor of 1.60 would mean zero real increase. Every point above 1.60 is real gain."}},{"@type":"Question","name":"Is the fitment factor the same for all levels?","acceptedAnswer":{"@type":"Answer","text":"Yes — one uniform factor applies to every level, which is why it is politically so contested. The 6th CPC briefly had differential multiples, but uniformity has been the rule since."}}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="tricolor-band" aria-hidden="true"><span class="t1"></span><span class="t2"></span><span class="t3"></span></div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-logo" aria-label="PayCalc.in home">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"/>
+      PayCalc<span class="logo-in">.in</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/#calculators">Calculators</a>
+      <a href="/#guides">Guides</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/tools/8th-pay-commission-calculator.html">8th CPC Calculator</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/tools/8th-pay-commission-calculator.html">8th CPC Calculator</a>
+    <a href="/#calculators">All Calculators</a>
+    <a href="/#guides">Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="container-article">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#guides">Guides</a></li>
+        <li aria-current="page">Fitment Factor, Explained</li>
+      </ol>
+    </nav>
+    <article class="article-body">
+    <h1>What Is the Fitment Factor?</h1>
+    <p class="article-meta"><span class="updated-tag">Updated August 2026</span> By the PayCalc.in team · Sources cited throughout</p>
+    <p class="calc-intro" style="font-size:1.08rem;color:var(--text-2)">One number converts the entire government pay structure from old to new. Here is how it is built, why 2.57 was chosen last time, and what 2.86 or 3.00 would mean for you.</p>
+
+    <h2>The definition</h2>
+    <p>The fitment factor is the uniform multiplier a pay commission applies to every employee's existing basic pay to produce the new basic pay: <strong>new basic = old basic × fitment factor</strong>, then rounded into the nearest cell of the new pay matrix. One factor, all 18 levels, no exceptions.</p>
+
+    <h2>Anatomy of the factor: DA merger + real increase</h2>
+    <p>The factor has two components:</p>
+    <ol>
+      <li><strong>DA neutralisation.</strong> On the changeover date the accumulated DA merges into basic pay. If DA is 60%, a factor of 1.60 merely keeps your Basic + DA unchanged.</li>
+      <li><strong>Real increase.</strong> Whatever the commission grants above neutralisation is the genuine raise.</li>
+    </ol>
+    <p>The 7th CPC's arithmetic, from its own report: DA on 1 January 2016 was 125%, requiring 2.25 to neutralise; the commission granted a real rise of 14.29%, so 2.25 × 1.1429 ≈ <strong>2.57</strong> <span class="cite">(<a href="https://doe.gov.in/sites/default/files/7cpc_report_eng.pdf" rel="noopener" target="_blank">7th CPC Report</a>)</span>.</p>
+    <p>Apply the same anatomy to the 8th CPC with 60% DA expected on 1 January 2026:</p>
+    <table>
+      <thead><tr><th class="num">Factor</th><th class="num">DA neutralisation part</th><th class="num">Implied real increase</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2.00</td><td class="num">1.60</td><td class="num">+25%</td></tr>
+        <tr><td class="num">2.57</td><td class="num">1.60</td><td class="num">+61%</td></tr>
+        <tr><td class="num">2.86</td><td class="num">1.60</td><td class="num">+79%</td></tr>
+        <tr><td class="num">3.00</td><td class="num">1.60</td><td class="num">+88%</td></tr>
+      </tbody>
+    </table>
+    <p>This is why some economists call 2.86 ambitious: it implies a real raise far above the 7th CPC's 14.3%. It is also why comparing raw factors across commissions misleads — 2.57 absorbed 125 points of DA; the next factor only absorbs 60.</p>
+
+    <div class="ad-slot" id="ad-mid" aria-hidden="true"><!-- AdSense: In-article responsive --></div>
+
+    <h2>Worked examples by level</h2>
+    <table>
+      <thead><tr><th>Level</th><th class="num">Current basic</th><th class="num">Basic + DA (60%)</th><th class="num">New basic at 2.86</th><th class="num">Monthly real gain</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="num">₹18,000</td><td class="num">₹28,800</td><td class="num">₹51,480</td><td class="num">₹22,680</td></tr>
+        <tr><td>6</td><td class="num">₹35,400</td><td class="num">₹56,640</td><td class="num">₹1,01,244</td><td class="num">₹44,604</td></tr>
+        <tr><td>7</td><td class="num">₹44,900</td><td class="num">₹71,840</td><td class="num">₹1,28,414</td><td class="num">₹56,574</td></tr>
+        <tr><td>10</td><td class="num">₹56,100</td><td class="num">₹89,760</td><td class="num">₹1,60,446</td><td class="num">₹70,686</td></tr>
+        <tr><td>13</td><td class="num">₹1,23,100</td><td class="num">₹1,96,960</td><td class="num">₹3,52,066</td><td class="num">₹1,55,106</td></tr>
+      </tbody>
+    </table>
+    <p>Run your own basic pay through all three factors in the <a href="/tools/8th-pay-commission-calculator.html">8th CPC salary calculator</a>.</p>
+
+    <h2>History of fitment across commissions</h2>
+    <table>
+      <thead><tr><th>Commission</th><th class="num">DA at changeover</th><th class="num">Factor</th><th class="num">Real increase</th></tr></thead>
+      <tbody>
+        <tr><td>6th CPC (2006)</td><td class="num">74% (incl. DP)</td><td class="num">1.86</td><td class="num">~40% (with grade pay)</td></tr>
+        <tr><td>7th CPC (2016)</td><td class="num">125%</td><td class="num">2.57</td><td class="num">14.3%</td></tr>
+        <tr><td>8th CPC (2026, exp.)</td><td class="num">60%</td><td class="num">TBD</td><td class="num">TBD</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq-item"><summary>What is the fitment factor in simple words?</summary><div class="faq-answer"><p>It is the single multiplier applied to your current basic pay to get your new basic pay when a pay commission takes effect. If the factor is 2.86 and your basic is ₹50,000, your new basic is ₹1,43,000.</p></div></details>
+    <details class="faq-item"><summary>Why was the 7th CPC factor 2.57?</summary><div class="faq-answer"><p>On 1 January 2016 DA stood at 125%. Merging that DA alone required a factor of 2.25 (basic × 2.25 = basic + 125% DA). The commission then granted a real increase of about 14.3%, giving 2.25 × 1.143 ≈ 2.57.</p></div></details>
+    <details class="faq-item"><summary>What factor do unions demand for the 8th CPC?</summary><div class="faq-answer"><p>The National Council (JCM) Staff Side has demanded a minimum of 2.86, arguing the minimum pay should rise from ₹18,000 to at least ₹51,480.</p></div></details>
+    <details class="faq-item"><summary>Does a bigger fitment factor mean a proportionally bigger raise?</summary><div class="faq-answer"><p>Not proportionally, because part of the factor only replaces the DA you already receive. At 60% DA, a factor of 1.60 would mean zero real increase. Every point above 1.60 is real gain.</p></div></details>
+    <details class="faq-item"><summary>Is the fitment factor the same for all levels?</summary><div class="faq-answer"><p>Yes — one uniform factor applies to every level, which is why it is politically so contested. The 6th CPC briefly had differential multiples, but uniformity has been the rule since.</p></div></details>
+
+    <div class="callout callout-warn"><p><strong>Disclaimer:</strong> the 8th CPC factor is not announced. All 8th CPC figures above are scenario projections.</p></div>
+    </article>
+  </div>
+  <div class="container-calc">
+    <section class="related-strip" aria-label="Related tools">
+      <h2>Related calculators &amp; guides</h2>
+      <div class="related-links">
+        <a href="/tools/8th-pay-commission-calculator.html">8th CPC Salary Calculator</a>
+        <a href="/guides/8th-pay-commission-explained.html">8th CPC Explained</a>
+        <a href="/guides/8th-cpc-pay-matrix.html">Pay Matrix</a>
+        <a href="/tools/8th-cpc-arrears-calculator.html">Arrears Calculator</a>
+      </div>
+    </section>
+    <div class="ad-slot" id="ad-footer" aria-hidden="true"><!-- AdSense: Leaderboard 728x90 / Mobile banner 320x50 --></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="site-logo"><img src="/assets/images/logo.svg" alt="" width="36" height="36"/>PayCalc<span class="logo-in">.in</span></a>
+        <p>Free, instant salary and pension calculators for Indian government employees. No sign-up, no tracking of your figures.</p>
+      </div>
+      <nav aria-label="Calculators">
+        <h2>Calculators</h2>
+        <ul>
+          <li><a href="/tools/8th-pay-commission-calculator.html">8th Pay Commission</a></li>
+          <li><a href="/tools/8th-cpc-pension-calculator.html">Pension Revision</a></li>
+          <li><a href="/tools/8th-cpc-arrears-calculator.html">Arrears</a></li>
+          <li><a href="/tools/da-calculator.html">DA Calculator</a></li>
+          <li><a href="/tools/hra-calculator.html">HRA Calculator</a></li>
+          <li><a href="/tools/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/tools/take-home-pay-calculator.html">Take-Home Pay</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="/guides/8th-pay-commission-explained.html">8th CPC Explained</a></li>
+          <li><a href="/guides/fitment-factor-explained.html">Fitment Factor</a></li>
+          <li><a href="/guides/8th-cpc-pay-matrix.html">Pay Matrix</a></li>
+          <li><a href="/guides/da-dearness-allowance-guide.html">DA Guide</a></li>
+          <li><a href="/guides/hra-rules-central-govt.html">HRA Rules</a></li>
+          <li><a href="/guides/nps-central-govt-guide.html">NPS Guide</a></li>
+          <li><a href="/levels/index.html">Salary by Pay Level</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2>Company</h2>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>Educational estimates only — not official government calculations. Verify with your Pay &amp; Accounts Office.</p>
+      <p>© 2026 PayCalc.in</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/ads.js" defer></script>
+
+</body>
+</html>

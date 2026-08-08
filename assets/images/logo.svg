@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36" fill="none" aria-hidden="true">
+  <rect width="36" height="36" rx="8" fill="#1A365D"/>
+  <rect x="8" y="6.5" width="20" height="23" rx="3.5" fill="#FFFFFF"/>
+  <rect x="10.8" y="9.5" width="14.4" height="5.5" rx="1.2" fill="#EFF6FF" stroke="#CBD5E0" stroke-width="0.6"/>
+  <text x="24" y="14" font-family="Menlo, monospace" font-size="5" font-weight="700" fill="#1A365D" text-anchor="end">₹</text>
+  <rect x="10.8" y="17.5" width="4" height="4" rx="0.9" fill="#D97706"/>
+  <rect x="16" y="17.5" width="4" height="4" rx="0.9" fill="#CBD5E0"/>
+  <rect x="21.2" y="17.5" width="4" height="4" rx="0.9" fill="#CBD5E0"/>
+  <rect x="10.8" y="22.7" width="4" height="4" rx="0.9" fill="#CBD5E0"/>
+  <rect x="16" y="22.7" width="4" height="4" rx="0.9" fill="#CBD5E0"/>
+  <rect x="21.2" y="22.7" width="4" height="4" rx="0.9" fill="#059669"/>
+</svg>
