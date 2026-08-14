@@ -15,3 +15,6 @@ npm-debug.log*
 # Local env files
 .env
 .env.local
+
+# Local content-generation scripts (not part of the site)
+.build/

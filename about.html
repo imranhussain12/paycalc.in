@@ -79,6 +79,23 @@
       <li><strong>Private by design.</strong> Calculations run entirely in your browser. Your salary figures are never uploaded, stored or seen by us.</li>
       <li><strong>Free, always.</strong> The site is supported by advertising, not by selling tools or data.</li>
     </ul>
+    <h2 id="how-we-work">How we build and check these tools</h2>
+    <p>Every calculator on this site is written from the actual rules, not copied from another website. When we build the HRA calculator we work from the Department of Expenditure orders that set the X/Y/Z percentages and the minimum-HRA floors. When we build the income tax calculator we work from the slabs as enacted. Where a rule has an edge case — the minimum HRA floor, the Section 87A marginal relief just above ₹12 lakh, the fact that Transport Allowance attracts DA on itself — we implement the edge case rather than ignore it.</p>
+    <p>Each calculator is then tested against known values. If a Level 10 employee on ₹56,100 basic should see ₹1,60,446 at a fitment factor of 2.86, we check that it does, and we check the boundary conditions around it. Numbers are formatted in the Indian system throughout: ₹1,60,446, not ₹160,446.</p>
+
+    <h2 id="projections">How we handle projections</h2>
+    <p>Much of this site concerns the 8th Pay Commission, whose report has not been published. That creates an obvious temptation to present guesses as facts, and a great deal of what circulates online does exactly that.</p>
+    <p>Our rule is simple: a projection is always labelled as a projection. We show the three fitment factors that are actually being discussed — 2.57, 2.86 and 3.00 — and we explain where each comes from, rather than asserting one of them is "confirmed". Where the honest answer is that nobody knows, we say so. We would rather be useful than dramatic.</p>
+    <p>We also try to correct the most common misunderstanding in this subject: that a fitment factor of 2.86 means salaries nearly triple. It does not, because you already draw 60% DA on your basic pay. The real increase is meaningfully smaller than the headline, and we say that on every page where the question arises.</p>
+
+    <h2 id="privacy-stance">Your numbers never leave your browser</h2>
+    <p>Every calculation on PayCalc.in runs client-side in JavaScript. Your basic pay, pension, income and city are never transmitted to us, never stored, and never logged. There is no account to create and no form that submits your salary anywhere. You can confirm this by opening your browser's network tab while using any calculator — nothing is sent.</p>
+    <p>This is a deliberate design decision. Salary details are personal, and there is no reason a calculator needs a server to multiply two numbers.</p>
+
+    <h2 id="who-for">Who this site is for</h2>
+    <p>Central Government employees and pensioners, primarily — the roughly 50 lakh serving staff and 65 lakh pensioners covered by the Central Pay Commissions. That includes railway employees, defence civilians, postal staff, CAPF personnel, teachers in central schools, and staff across every ministry and subordinate office.</p>
+    <p>State government employees will find much of it useful too, since most states adopt central structures with a lag, though your own state's pay commission sets your actual figures. We have tried to write in plain English, because a great deal of the audience is not reading in their first language, and because pay rules are complicated enough without unnecessary jargon.</p>
+
     <h2>Who runs this</h2>
     <p>PayCalc.in is built by the developer of <a href="https://calculious.com" rel="noopener" target="_blank">Calculious.com</a> (financial calculators for four countries) and <a href="https://renterplaybook.com" rel="noopener" target="_blank">RenterPlaybook.com</a> (state-by-state tenant law guides) — sites with the same philosophy: official sources, clean tools, no nonsense.</p>
     <h2>Corrections</h2>

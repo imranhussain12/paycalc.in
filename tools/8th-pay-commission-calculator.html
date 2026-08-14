@@ -235,6 +235,33 @@
   </div>
 
   <article class="container-article article-body">
+    <h2 id="how-to-use">How to use this calculator</h2>
+    <p>The calculator above needs one number you already know and one judgement call.</p>
+    <ol>
+      <li><strong>Enter your current basic pay.</strong> This is the "Basic Pay" or "Pay in Pay Matrix" line on your payslip — not gross pay, and not Basic + DA. If your payslip shows ₹44,900 as basic and ₹26,940 as DA, enter 44,900.</li>
+      <li><strong>Pick a fitment factor.</strong> Nobody knows the real figure yet, so the calculator offers the three most-discussed scenarios: 2.57 (a repeat of the 7th CPC number), 2.86 (the figure demanded by the staff side of the National Council of the JCM), and 3.00 (optimistic). Run all three — the spread between them is your realistic range.</li>
+      <li><strong>Check the DA rate.</strong> It defaults to 60%, the rate effective January 2026. Change it only if you are modelling a different point in time.</li>
+      <li><strong>Set HRA and NPS.</strong> Choose your city class (X, Y or Z) and whether NPS is deducted from your salary. Employees who joined before 1 January 2004 are on the old pension scheme and should switch NPS off.</li>
+    </ol>
+    <p>Everything recalculates as you type, and nothing is sent anywhere — the arithmetic runs entirely in your browser.</p>
+
+    <h2 id="reading-results">How to read the results</h2>
+    <p>The comparison table is the important part, and the row that confuses people most is DA.</p>
+    <p>Under the 8th CPC, your Dearness Allowance is expected to show as <strong>₹0 (merged)</strong>. This is not a pay cut. At every pay commission changeover the accumulated DA is folded into the new basic pay and the DA counter restarts at zero. The fitment factor is large precisely because it has to absorb that DA. So the honest comparison is not "old basic versus new basic" — it is <strong>old Basic + DA versus new basic</strong>, which is what the arrears line at the bottom of the results uses.</p>
+    <p>A worked example makes this concrete. A Section Officer at Level 10 on ₹56,100 basic:</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Measure</th><th class="num">Amount</th><th>What it tells you</th></tr></thead>
+      <tbody>
+        <tr><td>Current basic</td><td class="num">₹56,100</td><td>What the matrix says today</td></tr>
+        <tr><td>Current Basic + DA</td><td class="num">₹89,760</td><td>What you actually draw before allowances</td></tr>
+        <tr><td>Projected new basic (×2.86)</td><td class="num">₹1,60,446</td><td>Headline figure — looks like +186%</td></tr>
+        <tr><td>Real monthly gain</td><td class="num">₹70,686</td><td>The honest increase: +79% over Basic + DA</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>The 186% figure is the one that circulates on social media. The 79% figure is the one that will actually reach your bank account.</p>
+
     <h2 id="what-is-8th-cpc">What is the 8th Pay Commission?</h2>
     <p>The 8th Central Pay Commission (8th CPC) is the body that will recommend the next revision of salaries, allowances and pensions for roughly <strong>50 lakh Central Government employees and 65 lakh pensioners</strong>. The Union Cabinet approved the constitution of the commission in January 2025, and it was formally constituted with its chairperson and terms of reference notified in 2025 — with recommendations expected to take effect from <strong>1 January 2026</strong>.</p>
     <p>Pay commissions are appointed roughly every ten years. The 7th CPC was constituted in February 2014 and its recommendations took effect from 1 January 2016 <span class="cite">(<a href="https://doe.gov.in/7th-cpc-recommendations" rel="noopener" target="_blank">Department of Expenditure — 7th CPC</a>)</span>. Following the same cycle, the 8th CPC's award is effective from January 2026 even though the report itself will arrive later — the gap is bridged by <strong>arrears</strong>, paid retrospectively once the government accepts the report.</p>
@@ -243,10 +270,16 @@
     <div class="toc">
       <strong>On this page</strong>
       <ol>
+        <li><a href="#how-to-use">How to use this calculator</a></li>
+        <li><a href="#reading-results">How to read the results</a></li>
         <li><a href="#what-is-8th-cpc">What is the 8th Pay Commission?</a></li>
         <li><a href="#fitment-factor">How the fitment factor works</a></li>
+        <li><a href="#why-lower">Why the factor may be lower</a></li>
         <li><a href="#pay-matrix">The expected 8th CPC pay matrix</a></li>
         <li><a href="#level-impact">Impact on each pay level</a></li>
+        <li><a href="#worked-examples">Worked examples</a></li>
+        <li><a href="#limitations">What it does not model</a></li>
+        <li><a href="#what-to-do">What to do while you wait</a></li>
         <li><a href="#da-merger">The DA merger, explained</a></li>
         <li><a href="#hra">What happens to HRA</a></li>
         <li><a href="#pension">Pension revision</a></li>
@@ -269,6 +302,15 @@
     </table>
     <p>Why does the factor look so large when the "real" raise is smaller? Because it <strong>absorbs the Dearness Allowance</strong>. At the changeover, your 60% DA stops being paid separately — it is baked into the new basic. An employee at ₹56,100 basic already draws ₹89,760 as Basic + DA (56,100 × 1.60). A 2.86 factor produces ₹1,60,446 — so the genuine increase over Basic + DA is about 79%, not 186%.</p>
     <p>For context, the 7th CPC's factor of 2.57 was derived from the 125% DA prevailing on 1 January 2016 (a factor of 2.25 merely to absorb DA) plus a real increase of about 14.3% <span class="cite">(<a href="https://doe.gov.in/sites/default/files/7cpc_report_eng.pdf" rel="noopener" target="_blank">7th CPC Report, Chapter 5</a>)</span>. The National Council (Staff Side) of the Joint Consultative Machinery has demanded a factor of <strong>at least 2.86</strong> for the 8th CPC. Read the full breakdown in our <a href="/guides/fitment-factor-explained">fitment factor guide</a>.</p>
+
+    <h2 id="why-lower">Why the fitment factor may be lower than you hope</h2>
+    <p>Employee associations have anchored public expectations on 2.86. There are three reasons to hold that number loosely.</p>
+    <p><strong>The DA being absorbed is much smaller this time.</strong> The 7th CPC's 2.57 had to swallow 125% DA. A factor of 2.25 achieved nothing but neutralisation; the genuine raise was the remaining 14.3%. In 2026 the DA to be absorbed is roughly 60%, so neutralisation needs only about 1.60. A factor of 2.86 would therefore represent a real increase of about 79% — more than five times what the 7th CPC granted. No pay commission in independent India has awarded a real increase on that scale.</p>
+    <p><strong>The fiscal arithmetic is unforgiving.</strong> The 7th CPC award cost the exchequer roughly ₹1.02 lakh crore in its first year, about 0.7% of GDP at the time. Scaling a comparable structure by a much larger real increase, across roughly 50 lakh employees and 65 lakh pensioners, produces a number the Ministry of Finance is unlikely to accept without modification. Governments have repeatedly accepted pay commission reports "with modifications" for exactly this reason.</p>
+    <p><strong>History suggests moderation.</strong> The real increase granted was about 40% by the 6th CPC (helped by the introduction of grade pay) and 14.3% by the 7th. A figure between those two is a more defensible planning assumption than the union demand.</p>
+    <div class="callout callout-warn">
+      <p><strong>Plan with a range, not a number.</strong> Use 2.57 as your conservative case and 2.86 as your optimistic case. If you are making a real financial commitment — a home loan, a school admission, a car — plan against the conservative figure. Arrears are taxable, delayed, and smaller than the headlines suggest.</p>
+    </div>
 
     <h2 id="pay-matrix">The expected 8th CPC pay matrix</h2>
     <p>The 7th CPC replaced the old grade-pay system with a <strong>pay matrix</strong>: 18 levels across the top (Level 1 for the lowest entry posts up to Level 18 for the Cabinet Secretary), with 40 stages of annual 3% increments running down each column. The 8th CPC is widely expected to retain this structure, simply repopulating each cell with the new factor.</p>
@@ -300,6 +342,40 @@
       <li><strong>Levels 10–14 (Group A):</strong> officers additionally benefit because HRA and transport allowance are percentages or slabs tied to basic pay.</li>
       <li><strong>Levels 15–18 (senior officers):</strong> apex pay is expected to remain capped (₹2,50,000 under 7th CPC; roughly ₹6.4–7.5 lakh projected), keeping the compression ratio between the lowest and highest paid at around 1:13.9.</li>
     </ul>
+
+    <h2 id="worked-examples">Worked examples across the matrix</h2>
+    <p>All figures below use fitment factor 2.86, DA at 60%, and a Y-class city at 18% HRA. "Real gain" compares projected new basic against current Basic + DA.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Post</th><th>Level</th><th class="num">Basic now</th><th class="num">Basic + DA</th><th class="num">New basic</th><th class="num">Real gain</th></tr></thead>
+      <tbody>
+        <tr><td>Multi-Tasking Staff</td><td>1</td><td class="num">₹18,000</td><td class="num">₹28,800</td><td class="num">₹51,480</td><td class="num">₹22,680</td></tr>
+        <tr><td>Upper Division Clerk</td><td>4</td><td class="num">₹25,500</td><td class="num">₹40,800</td><td class="num">₹72,930</td><td class="num">₹32,130</td></tr>
+        <tr><td>Junior Engineer</td><td>6</td><td class="num">₹35,400</td><td class="num">₹56,640</td><td class="num">₹1,01,244</td><td class="num">₹44,604</td></tr>
+        <tr><td>Inspector (CBIC)</td><td>7</td><td class="num">₹44,900</td><td class="num">₹71,840</td><td class="num">₹1,28,414</td><td class="num">₹56,574</td></tr>
+        <tr><td>Group A entry (IAS)</td><td>10</td><td class="num">₹56,100</td><td class="num">₹89,760</td><td class="num">₹1,60,446</td><td class="num">₹70,686</td></tr>
+        <tr><td>Director</td><td>13</td><td class="num">₹1,23,100</td><td class="num">₹1,96,960</td><td class="num">₹3,52,066</td><td class="num">₹1,55,106</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Two patterns are worth noticing. The percentage gain is identical at every level, because the fitment factor is uniform — but the rupee gain compounds sharply with seniority. And because HRA and transport allowance are tied to basic pay, the total package gain at senior levels is larger still. For a level-by-level breakdown including allowances and pension, see our <a href="/levels/">salary by pay level</a> pages.</p>
+
+    <h2 id="limitations">What this calculator does not model</h2>
+    <p>Being clear about the limits matters more than adding features.</p>
+    <ul>
+      <li><strong>Matrix rounding.</strong> Real fixation multiplies your pay and then rounds it into the nearest cell of the new matrix. The calculator gives the arithmetic product, which can differ from the final cell by a few hundred rupees.</li>
+      <li><strong>Annual increments in the arrears window.</strong> If you earn an increment between January 2026 and implementation, your actual arrears are slightly higher than shown.</li>
+      <li><strong>DA instalments before implementation.</strong> You will keep drawing DA — including the pending July 2026 instalment — until the changeover. Each one narrows the gap between old and new pay, so real arrears will be lower than the simple estimate.</li>
+      <li><strong>Allowance rationalisation.</strong> The 7th CPC cut HRA from 30/20/10 to 24/16/8 and abolished dozens of smaller allowances. The 8th CPC may do something similar; the calculator applies today's percentages to the new basic.</li>
+      <li><strong>Income tax on the new salary.</strong> A higher salary means a higher tax slab. Model that separately in the <a href="/tools/income-tax-calculator">income tax calculator</a> or the <a href="/tools/take-home-pay-calculator">take-home pay calculator</a>.</li>
+      <li><strong>Cadre-specific anomalies.</strong> Level 13's 2.67 multiple under the 7th CPC is the best-known example. Similar corrections may apply to particular cadres.</li>
+    </ul>
+
+    <h2 id="what-to-do">What to do while you wait</h2>
+    <p>The report will not arrive sooner because you refresh news sites. Three things are genuinely worth doing now.</p>
+    <p><strong>Check your pay fixation is correct today.</strong> Errors carried forward from the 7th CPC changeover get multiplied by the new fitment factor. If your level or stage was fixed wrongly in 2016, the mistake compounds. Your Pay &amp; Accounts Office can confirm your current cell.</p>
+    <p><strong>Understand Section 89(1) relief before the arrears land.</strong> A large lump sum received in one financial year can push you into a higher slab. Section 89(1) lets you spread the tax back across the years the arrears relate to, claimed through Form 10E on the income tax portal. Filing it correctly can save a substantial amount — see the <a href="/tools/8th-cpc-arrears-calculator">arrears calculator</a> for the mechanics.</p>
+    <p><strong>Ignore fitment factors quoted as "confirmed".</strong> Nothing is confirmed until the commission submits its report, the Cabinet accepts it, and the Department of Expenditure issues a gazette notification. Any figure circulating before those three steps is a projection, including the ones on this page.</p>
 
     <h2 id="da-merger">The DA merger, explained</h2>
     <p>Dearness Allowance (महंगाई भत्ता) is inflation compensation, revised every January and July based on the All-India Consumer Price Index for Industrial Workers (AICPI-IW) published by the Labour Bureau <span class="cite">(<a href="https://labourbureau.gov.in/" rel="noopener" target="_blank">Labour Bureau</a>)</span>. By January 2026 it stands at <strong>60% of basic pay</strong>.</p>
