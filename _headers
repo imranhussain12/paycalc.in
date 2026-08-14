@@ -1,7 +1,11 @@
 # Cloudflare Pages cache & security headers.
-# NOTE: Pages serves extensionless URLs (/tools/x, not /tools/x.html), so these
-# patterns must NOT use .html — a `/*.html` rule matches nothing users request.
-# Rules are applied in order; later rules override earlier ones per header.
+#
+# NOTE 1: Pages serves extensionless URLs (/tools/x, not /tools/x.html), so
+# these patterns must NOT use .html — a `/*.html` rule matches nothing.
+#
+# NOTE 2: Pages *appends* matching rules rather than replacing them, so two
+# rules both setting Cache-Control produce a malformed doubled header. Keep
+# exactly one Cache-Control declaration per path.
 
 /*
   Cache-Control: public, max-age=3600, must-revalidate
@@ -11,14 +15,6 @@
 
 # Assets use fixed filenames (not content-hashed): short cache + revalidate so
 # CSS/JS edits reach returning visitors quickly (cheap 304 if unchanged).
+# This is the only other Cache-Control rule, so it overrides cleanly.
 /assets/*
   Cache-Control: public, max-age=600, must-revalidate
-
-/sitemap.xml
-  Cache-Control: public, max-age=86400
-
-/robots.txt
-  Cache-Control: public, max-age=86400
-
-/ads.txt
-  Cache-Control: public, max-age=86400
