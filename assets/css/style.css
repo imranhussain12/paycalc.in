@@ -91,13 +91,13 @@ p { margin: 0 0 1em; }
 }
 .site-logo {
   display: flex; align-items: center; gap: 10px;
-  text-decoration: none; color: var(--blue); font-weight: 800;
+  text-decoration: none; color: var(--blue); font-weight: 700;
   font-size: 1.2rem; letter-spacing: -0.02em;
 }
 .site-logo .logo-in { color: var(--saffron-text); }
 .site-nav { display: none; align-items: center; gap: 4px; }
 .site-nav a {
-  color: var(--text-2); text-decoration: none; font-weight: 500;
+  color: var(--text-2); text-decoration: none; font-weight: 600;
   font-size: 0.95rem; padding: 8px 14px; border-radius: 8px;
 }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--blue); background: var(--blue-light); }
@@ -118,7 +118,7 @@ p { margin: 0 0 1em; }
 .mobile-nav.open { display: block; }
 .mobile-nav a {
   display: block; padding: 12px 8px; text-decoration: none;
-  color: var(--text); font-weight: 500; border-bottom: 1px solid var(--bg-soft);
+  color: var(--text); font-weight: 600; border-bottom: 1px solid var(--bg-soft);
 }
 .mobile-nav a:last-child { border-bottom: none; }
 
@@ -348,7 +348,7 @@ p { margin: 0 0 1em; }
 .result-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-3); font-weight: 600; }
 .result-table th:first-child, .result-table td:first-child { text-align: left; }
 .result-table td { font-family: var(--font-mono); }
-.result-table td:first-child { font-family: var(--font-sans); font-weight: 500; }
+.result-table td:first-child { font-family: var(--font-sans); font-weight: 600; }
 .result-table .pos { color: var(--green-text); }
 .result-table .neg { color: var(--red); }
 .result-table tr.total-row td { font-weight: 700; border-top: 2px solid var(--border-dark); border-bottom: none; background: var(--bg-soft); }
@@ -422,7 +422,7 @@ p { margin: 0 0 1em; }
 .related-links a {
   display: inline-flex; align-items: center; min-height: 44px; padding: 8px 18px;
   background: var(--bg); border: 1px solid var(--border-dark); border-radius: 99px;
-  text-decoration: none; color: var(--blue); font-weight: 500; font-size: 0.92rem;
+  text-decoration: none; color: var(--blue); font-weight: 600; font-size: 0.92rem;
 }
 .related-links a:hover { border-color: var(--blue); background: var(--blue-light); }
 
