@@ -1,43 +1,24 @@
-# Cloudflare Pages cache & security headers
-# Assets use fixed filenames (not content-hashed): short cache + revalidate
-# so CSS/JS edits reach returning visitors quickly (cheap 304 if unchanged).
+# Cloudflare Pages cache & security headers.
+# NOTE: Pages serves extensionless URLs (/tools/x, not /tools/x.html), so these
+# patterns must NOT use .html — a `/*.html` rule matches nothing users request.
+# Rules are applied in order; later rules override earlier ones per header.
+
+/*
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Assets use fixed filenames (not content-hashed): short cache + revalidate so
+# CSS/JS edits reach returning visitors quickly (cheap 304 if unchanged).
 /assets/*
   Cache-Control: public, max-age=600, must-revalidate
-  X-Content-Type-Options: nosniff
-
-/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-/tools/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-/guides/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-/levels/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-/
-  Cache-Control: public, max-age=3600, must-revalidate
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
 
 /sitemap.xml
   Cache-Control: public, max-age=86400
+
 /robots.txt
   Cache-Control: public, max-age=86400
+
 /ads.txt
   Cache-Control: public, max-age=86400
