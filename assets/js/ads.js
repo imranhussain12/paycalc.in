@@ -9,8 +9,9 @@
  * 3. git add / commit / push — ads appear on all pages automatically.
  *
  * Current behaviour:
- *  • The base AdSense script ALWAYS loads (so the integration is live for
- *    Google's review and Auto ads can serve once approved).
+ *  • The base AdSense script is loaded by the async <script> tag in each page's
+ *    <head>. It lives in the HTML source because that is what AdSense's site
+ *    verifier reads — do not move it back into JavaScript.
  *  • ENABLED = false → the "Advertisement" placeholder boxes are HIDDEN
  *    (no blank ad slots shown to visitors or the AdSense reviewer).
  *  • ENABLED = true  → placeholders are replaced with responsive ad units.
@@ -33,28 +34,9 @@ var ADSENSE_CONFIG = {
 (function () {
   'use strict';
 
-  /* Load the base AdSense script (required for review + Auto ads), but keep it
-     off the critical path: it is ~250KB of third-party JS that must not delay
-     first paint or the calculator becoming interactive. */
-  function loadAdSense() {
-    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CONFIG.PUBLISHER_ID;
-    s.crossOrigin = 'anonymous';
-    document.head.appendChild(s);
-  }
-
-  function scheduleAdSense() {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadAdSense, { timeout: 3000 });
-    } else {
-      setTimeout(loadAdSense, 1200);
-    }
-  }
-
-  if (document.readyState === 'complete') scheduleAdSense();
-  else window.addEventListener('load', scheduleAdSense);
+  /* The base AdSense script is loaded by the async <script> tag in each page's
+     <head> — that is the snippet AdSense's site verifier looks for, so it must
+     stay in the HTML source. This file must NOT inject it a second time. */
 
   function initSlots() {
     var slots = document.querySelectorAll('.ad-slot');
