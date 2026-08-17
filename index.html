@@ -34,7 +34,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"/></noscript>
-<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/style.css?v=2"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"PayCalc.in","url":"https://paycalc.in","logo":"https://paycalc.in/assets/images/favicon.svg","description":"Free salary, pension and tax calculators for Indian Central Government employees, sourced from official gazette notifications.","areaServed":"India","knowsAbout":["8th Pay Commission","Dearness Allowance","House Rent Allowance","Central Government pension","Income tax India","National Pension System"]}
 </script>
@@ -74,22 +74,57 @@
 </header>
 
 <main id="main-content">
-  <section class="hero">
+  <section class="masthead" aria-labelledby="mh-title">
     <div class="container">
-      <h1>Your Pay, Calculated.</h1>
-      <p class="hero-sub">Free salary calculators for Central Government employees — 8th Pay Commission, DA, HRA, pension, and take-home pay. Every figure sourced from official gazettes.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="/tools/8th-pay-commission-calculator">Calculate 8th CPC Salary →</a>
-        <a class="btn btn-secondary" href="/#guides">Read the Guides</a>
+      <span class="masthead-kicker"><span class="dot" aria-hidden="true"></span>8th CPC · effective 1 Jan 2026</span>
+      <h1 id="mh-title">What will you<br/>actually be paid?</h1>
+      <p class="masthead-sub">Type your basic pay and see your projected 8th Pay Commission salary straight away. No sign-up, and your figures never leave your browser.</p>
+
+      <div class="quickcalc">
+        <div>
+          <label class="qc-label" for="qcBasic">Your current basic pay</label>
+          <div class="qc-input-wrap">
+            <span class="rs" aria-hidden="true">₹</span>
+            <input type="number" id="qcBasic" inputmode="numeric" min="0" step="100" placeholder="56,100" autocomplete="off"/>
+          </div>
+          <p class="qc-hint">Basic pay only — not Basic + DA, and not gross.</p>
+
+          <fieldset class="qc-factors" style="border:0;padding:0;margin:0">
+            <legend class="visually-hidden">Fitment factor</legend>
+            <label class="f"><input type="radio" name="qcFactor" value="2.57" checked/><span>2.57<small>7th CPC</small></span></label>
+            <label class="f"><input type="radio" name="qcFactor" value="2.86"/><span>2.86<small>Union demand</small></span></label>
+            <label class="f"><input type="radio" name="qcFactor" value="3.00"/><span>3.00<small>Optimistic</small></span></label>
+          </fieldset>
+        </div>
+
+        <div class="qc-result" aria-live="polite">
+          <span class="qc-label">Projected new basic pay</span>
+          <span class="qc-value" id="qcValue">₹—</span>
+          <p class="qc-delta" id="qcDelta">Enter your basic pay, or tap your pay level below.</p>
+          <div class="qc-cta">
+            <a class="btn btn-primary" id="qcCta" href="/tools/8th-pay-commission-calculator">Full breakdown with HRA &amp; NPS →</a>
+          </div>
+        </div>
       </div>
-      <div class="stats-bar">
-        <div><span class="stat-num">7</span><span class="stat-label">Calculators</span></div>
-        <div><span class="stat-num">6</span><span class="stat-label">In-depth Guides</span></div>
-        <div><span class="stat-num">1 Cr+</span><span class="stat-label">Employees Covered</span></div>
-        <div><span class="stat-num">₹0</span><span class="stat-label">Cost, Forever</span></div>
+
+      <div class="level-picker">
+        <div class="level-picker-head">
+          <p>Don't know your basic pay? Tap your pay level.</p>
+          <a href="/levels/">Compare all levels →</a>
+        </div>
+        <div class="level-chips" id="levelChips"></div>
       </div>
     </div>
   </section>
+
+  <div class="trust-rule">
+    <div class="container">
+      <span><b>7</b> calculators</span>
+      <span><b>6</b> in-depth guides</span>
+      <span><b>19</b> pay levels covered</span>
+      <span><b>₹0</b> — free, no sign-up</span>
+    </div>
+  </div>
 
   <div class="ad-slot" id="ad-top" aria-hidden="true">
     <!-- AdSense: Leaderboard 728x90 / Mobile banner 320x50 -->
@@ -268,7 +303,8 @@
   </div>
 </footer>
 
-<script src="/assets/js/main.js" defer></script>
-<script src="/assets/js/ads.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/home.js?v=2" defer></script>
+<script src="/assets/js/ads.js?v=2" defer></script>
 </body>
 </html>
