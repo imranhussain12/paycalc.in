@@ -31,10 +31,10 @@
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"/></noscript>
-<link rel="stylesheet" href="/assets/css/style.css?v=3"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional"/></noscript>
+<link rel="stylesheet" href="/assets/css/style.css?v=7"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://paycalc.in/"},
@@ -133,8 +133,12 @@
           <legend style="font-weight:600;font-size:0.92rem;margin-bottom:6px;padding:0">Expected Fitment Factor</legend>
           <div class="radio-pills">
             <label class="radio-pill">
-              <input type="radio" name="fitment" value="2.57" data-calc checked/>
-              <span><strong>2.57</strong><em>Same as 7th CPC — Conservative</em></span>
+              <input type="radio" name="fitment" value="2.28" data-calc checked/>
+              <span><strong>2.28</strong><em>Analyst consensus — Realistic</em></span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="fitment" value="2.57" data-calc/>
+              <span><strong>2.57</strong><em>Same as 7th CPC</em></span>
             </label>
             <label class="radio-pill">
               <input type="radio" name="fitment" value="2.86" data-calc/>
@@ -322,6 +326,11 @@
       <p><strong>Plan with a range, not a number.</strong> Use 2.57 as your conservative case and 2.86 as your optimistic case. If you are making a real financial commitment — a home loan, a school admission, a car — plan against the conservative figure. Arrears are taxable, delayed, and smaller than the headlines suggest.</p>
     </div>
 
+    <figure class="chart">
+      <img src="/assets/images/fitment-comparison.svg" alt="Bar chart showing the real pay increase implied by each fitment factor: 1.83 gives 14.3%, 2.00 gives 25%, 2.28 gives 42.5%, 2.57 gives 60.6% and 2.86 gives 78.8% over Basic plus DA." width="680" height="284" loading="lazy" decoding="async"/>
+      <figcaption>With DA at 60%, a factor of 1.60 is pure neutralisation. Only the excess above it is a genuine raise — which is why 2.57 would be a far larger award now than it was in 2016.</figcaption>
+    </figure>
+
     <h2 id="pay-matrix">The expected 8th CPC pay matrix</h2>
     <p>The 7th CPC replaced the old grade-pay system with a <strong>pay matrix</strong>: 18 levels across the top (Level 1 for the lowest entry posts up to Level 18 for the Cabinet Secretary), with 40 stages of annual 3% increments running down each column. The 8th CPC is widely expected to retain this structure, simply repopulating each cell with the new factor.</p>
     <p>Projected entry pay by level under three fitment scenarios:</p>
@@ -492,9 +501,11 @@
         <h2>Guides</h2>
         <ul>
           <li><a href="/guides/8th-pay-commission-explained">8th CPC Explained</a></li>
+          <li><a href="/guides/8th-cpc-implementation-date-arrears">Implementation &amp; Arrears</a></li>
           <li><a href="/guides/fitment-factor-explained">Fitment Factor</a></li>
           <li><a href="/guides/8th-cpc-pay-matrix">Pay Matrix</a></li>
           <li><a href="/guides/da-dearness-allowance-guide">DA Guide</a></li>
+          <li><a href="/guides/da-hike-july-2026">DA Hike July 2026</a></li>
           <li><a href="/guides/hra-rules-central-govt">HRA Rules</a></li>
           <li><a href="/guides/nps-central-govt-guide">NPS Guide</a></li>
           <li><a href="/levels/">Salary by Pay Level</a></li>
@@ -519,7 +530,7 @@
 </footer>
 
 <script src="/assets/js/main.js?v=2" defer></script>
-<script src="/assets/js/ads.js?v=2" defer></script>
+<script src="/assets/js/ads.js?v=3" defer></script>
 <script src="/assets/js/calculators/8th-cpc.js?v=2" defer></script>
 </body>
 </html>

@@ -43,14 +43,19 @@
       });
     }
 
-    /* Live recalculation wiring: any element with [data-calc] triggers recalc() */
+    /* Live recalculation wiring: any element with [data-calc] triggers recalc().
+       Guarded so that a calculator throwing (e.g. markup and script out of sync
+       after an edit) cannot take down the rest of the page's JavaScript. */
     if (typeof window.recalc === 'function') {
-      var inputs = document.querySelectorAll('[data-calc]');
-      inputs.forEach(function (el) {
-        el.addEventListener('input', window.recalc);
-        el.addEventListener('change', window.recalc);
+      var safeRecalc = function () {
+        try { window.recalc(); }
+        catch (e) { if (window.console && console.warn) console.warn('recalc failed:', e); }
+      };
+      document.querySelectorAll('[data-calc]').forEach(function (el) {
+        el.addEventListener('input', safeRecalc);
+        el.addEventListener('change', safeRecalc);
       });
-      window.recalc();
+      safeRecalc();
     }
   });
 })();

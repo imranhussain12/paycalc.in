@@ -39,14 +39,11 @@ var ADSENSE_CONFIG = {
      stay in the HTML source. This file must NOT inject it a second time. */
 
   function initSlots() {
+    if (!ADSENSE_CONFIG.ENABLED) return;   /* CSS already hides placeholders */
     var slots = document.querySelectorAll('.ad-slot');
     slots.forEach(function (slot) {
-      if (!ADSENSE_CONFIG.ENABLED) {
-        slot.style.display = 'none';
-        return;
-      }
       var slotId = ADSENSE_CONFIG.AD_SLOTS[slot.id];
-      if (!slotId || slotId.indexOf('X') === 0) { slot.style.display = 'none'; return; }
+      if (!slotId || slotId.indexOf('X') === 0) return;
       slot.classList.add('ad-slot-live');
       slot.innerHTML = '<ins class="adsbygoogle" style="display:block" ' +
         'data-ad-client="' + ADSENSE_CONFIG.PUBLISHER_ID + '" ' +

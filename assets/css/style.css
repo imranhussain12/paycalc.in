@@ -3,6 +3,27 @@
    Light, clean, trustworthy. Mobile-first.
    ═══════════════════════════════════════════════════════════ */
 
+/* Metric-matched fallback. Inter loads with font-display:swap, and without a
+   size-matched fallback the swap reflows body copy and produces CLS. These
+   overrides make the local fallback occupy almost exactly the same space, so
+   the swap is visually near-invisible and costs no layout shift. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Helvetica'), local('Roboto');
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22.4%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Mono Fallback';
+  src: local('Menlo'), local('Consolas'), local('Courier New');
+  size-adjust: 96%;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
 :root {
   --bg: #FFFFFF;
   --bg-soft: #F8F9FA;
@@ -30,8 +51,8 @@
   --shadow-lg: 0 8px 24px rgba(26, 54, 93, 0.12);
   --radius: 10px;
   --radius-lg: 14px;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SF Mono', 'Menlo', monospace;
+  --font-sans: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Mono Fallback', 'SF Mono', 'Menlo', monospace;
   --w-article: 720px;
   --w-calc: 960px;
   --w-site: 1120px;
@@ -93,6 +114,7 @@ p { margin: 0 0 1em; }
   display: flex; align-items: center; gap: 10px;
   text-decoration: none; color: var(--blue); font-weight: 700;
   font-size: 1.2rem; letter-spacing: -0.02em;
+  min-height: 44px; /* comfortable tap target */
 }
 .site-logo .logo-in { color: var(--saffron-text); }
 .site-nav { display: none; align-items: center; gap: 4px; }
@@ -312,11 +334,12 @@ p { margin: 0 0 1em; }
 /* Toggle switch */
 .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .toggle {
-  position: relative; display: inline-block; width: 52px; height: 30px; flex-shrink: 0;
+  /* 44px tall hit area; the visible track stays 30px and is centred inside it */
+  position: relative; display: inline-block; width: 52px; height: 44px; flex-shrink: 0;
 }
 .toggle input { position: absolute; opacity: 0; inset: 0; cursor: pointer; z-index: 1; margin: 0; }
 .toggle .track {
-  position: absolute; inset: 0; background: var(--border-dark); border-radius: 99px;
+  position: absolute; inset: 7px 0; background: var(--border-dark); border-radius: 99px;
   transition: background 0.15s;
 }
 .toggle .track::after {
@@ -364,15 +387,13 @@ p { margin: 0 0 1em; }
 .callout-success { background: var(--green-soft); border-color: #A7F3D0; }
 
 /* ── Ad slots ──────────────────────────────────────────── */
-.ad-slot {
-  margin: 28px auto; padding: 24px 16px; text-align: center;
-  border: 2px dashed var(--border-dark); border-radius: var(--radius);
-  color: var(--text-3); font-size: 0.8rem; text-transform: uppercase;
-  letter-spacing: 0.08em; max-width: var(--w-calc);
+/* Hidden by default so nothing shifts when ads.js runs. ads.js adds
+   .ad-slot-live only when a real slot id is configured. */
+.ad-slot { display: none; }
+.ad-slot.ad-slot-live {
+  display: block; margin: 28px auto; text-align: center;
+  max-width: var(--w-calc); min-height: 90px;
 }
-.ad-slot::before { content: "Advertisement"; }
-.ad-slot.ad-slot-live { border: none; padding: 0; }
-.ad-slot.ad-slot-live::before { content: ""; }
 
 /* ── Article content ───────────────────────────────────── */
 .article-body { padding-bottom: 48px; }
@@ -619,3 +640,22 @@ p { margin: 0 0 1em; }
 .trust-rule b { color: var(--blue); font-family: var(--font-mono); font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) { .qc-value { transition: none !important; } }
+
+/* ── Long-string safety ────────────────────────────────────
+   Long URLs and unbroken tokens (e.g. policy links, PRAN-style
+   identifiers) must wrap rather than force horizontal scroll on
+   narrow screens. `anywhere` only on prose links, so normal words
+   still break at sensible points. */
+body { overflow-wrap: break-word; }
+.article-body a, .prose-page a, .faq-answer a { overflow-wrap: anywhere; }
+
+/* ── Figures ───────────────────────────────────────────── */
+figure.chart {
+  margin: 28px 0; padding: 18px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+}
+figure.chart img { display: block; width: 100%; height: auto; }
+figure.chart figcaption {
+  margin-top: 12px; font-size: 0.85rem; color: var(--text-3);
+  border-top: 1px solid var(--border); padding-top: 10px;
+}
