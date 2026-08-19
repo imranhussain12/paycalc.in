@@ -25,7 +25,7 @@
     { level: '18', entry: 250000, max: 250000 }
   ];
 
-  window.HRA_RATES = { X: 0.27, Y: 0.18, Z: 0.09 };
+  window.HRA_RATES = { X: 0.30, Y: 0.20, Z: 0.10 };
 
   function val(id) { return document.getElementById(id); }
 

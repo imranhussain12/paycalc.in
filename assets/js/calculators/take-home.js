@@ -3,7 +3,7 @@
   'use strict';
   function val(id) { return document.getElementById(id); }
 
-  var HRA_RATES = { X: 0.27, Y: 0.18, Z: 0.09, NONE: 0 };
+  var HRA_RATES = { X: 0.30, Y: 0.20, Z: 0.10, NONE: 0 };
   /* Transport Allowance (TPTA): higher rate for Level 9+, TPTA cities get higher slab */
   function transportAllowance(levelBand, tptaCity) {
     if (levelBand === 'L9plus') return tptaCity ? 7200 : 3600;

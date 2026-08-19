@@ -3,7 +3,7 @@
   'use strict';
   function val(id) { return document.getElementById(id); }
 
-  var RATES = { X: 0.27, Y: 0.18, Z: 0.09 };
+  var RATES = { X: 0.30, Y: 0.20, Z: 0.10 };
   var MINIMUMS = { X: 5400, Y: 3600, Z: 1800 }; /* HRA floor per 7th CPC (30%/20%/10% of ₹18,000 basis) */
 
   window.recalc = function () {
