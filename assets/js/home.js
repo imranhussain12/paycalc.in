@@ -36,7 +36,9 @@
       b.className = 'chip';
       b.textContent = 'L' + l[0];
       b.setAttribute('aria-pressed', 'false');
-      b.setAttribute('aria-label', 'Pay Level ' + l[0] + ', entry pay ' + inr(l[1]));
+      /* Accessible name must start with the visible text ("L7") so a
+         voice-control user saying "click L7" matches the button. */
+      b.setAttribute('aria-label', 'L' + l[0] + ', Pay Level ' + l[0] + ', entry pay ' + inr(l[1]));
       b.addEventListener('click', function () {
         input.value = l[1];
         chipWrap.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
