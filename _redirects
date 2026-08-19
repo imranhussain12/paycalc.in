@@ -1,4 +1,36 @@
 # Cloudflare Pages redirect rules
 /tools  /#calculators  301
 /guides  /#guides  301
+
+# HRA city pages consolidated into state pages (Aug 2026)
+/hra/agra  /hra/state/uttar-pradesh  301
+/hra/allahabad  /hra/state/uttar-pradesh  301
+/hra/kanpur  /hra/state/uttar-pradesh  301
+/hra/lucknow  /hra/state/uttar-pradesh  301
+/hra/meerut  /hra/state/uttar-pradesh  301
+/hra/varanasi  /hra/state/uttar-pradesh  301
+/hra/amritsar  /hra/state/punjab  301
+/hra/jalandhar  /hra/state/punjab  301
+/hra/ludhiana  /hra/state/punjab  301
+/hra/aurangabad  /hra/state/maharashtra  301
+/hra/nagpur  /hra/state/maharashtra  301
+/hra/nashik  /hra/state/maharashtra  301
+/hra/bhopal  /hra/state/madhya-pradesh  301
+/hra/gwalior  /hra/state/madhya-pradesh  301
+/hra/indore  /hra/state/madhya-pradesh  301
+/hra/jabalpur  /hra/state/madhya-pradesh  301
+/hra/coimbatore  /hra/state/tamil-nadu  301
+/hra/madurai  /hra/state/tamil-nadu  301
+/hra/jaipur  /hra/state/rajasthan  301
+/hra/jodhpur  /hra/state/rajasthan  301
+/hra/jammu  /hra/state/jammu-and-kashmir  301
+/hra/srinagar  /hra/state/jammu-and-kashmir  301
+/hra/kochi  /hra/state/kerala  301
+/hra/thiruvananthapuram  /hra/state/kerala  301
+/hra/rajkot  /hra/state/gujarat  301
+/hra/surat  /hra/state/gujarat  301
+/hra/vadodara  /hra/state/gujarat  301
+/hra/vijayawada  /hra/state/andhra-pradesh  301
+/hra/visakhapatnam  /hra/state/andhra-pradesh  301
+
 /*  /404.html  404
