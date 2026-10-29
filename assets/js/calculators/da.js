@@ -25,14 +25,15 @@
     { label: 'Jul 2024', pct: 53 },
     { label: 'Jan 2025', pct: 55 },
     { label: 'Jul 2025', pct: 58 },
-    { label: 'Jan 2026', pct: 60 }
+    { label: 'Jan 2026', pct: 60 },
+    { label: 'Jul 2026', pct: 63 }
   ];
 
   function drawChart() {
     var host = val('daChart');
     if (!host) return;
     var W = 680, H = 260, padL = 42, padR = 16, padT = 16, padB = 42;
-    var maxPct = 65;
+    var maxPct = 68;
     var innerW = W - padL - padR, innerH = H - padT - padB;
     var pts = DA_HISTORY.map(function (d, i) {
       var x = padL + (i / (DA_HISTORY.length - 1)) * innerW;
@@ -40,7 +41,7 @@
       return { x: x, y: y, d: d };
     });
     var line = pts.map(function (p) { return p.x.toFixed(1) + ',' + p.y.toFixed(1); }).join(' ');
-    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of Central Government DA percentage from January 2016 (0%) to January 2026 (60%)">';
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of Central Government DA percentage from January 2016 (0%) to July 2026 (63%)">';
     /* gridlines */
     [0, 10, 20, 30, 40, 50, 60].forEach(function (g) {
       var y = padT + innerH - (g / maxPct) * innerH;
@@ -59,7 +60,7 @@
       svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + (last ? 5 : 3) + '" fill="' + (last ? '#D97706' : '#1A365D') + '"/>';
     });
     var lastP = pts[pts.length - 1];
-    svg += '<text x="' + (lastP.x - 8) + '" y="' + (lastP.y - 10) + '" text-anchor="end" font-size="12" font-weight="700" fill="#D97706" font-family="monospace">60%</text>';
+    svg += '<text x="' + (lastP.x - 8) + '" y="' + (lastP.y - 10) + '" text-anchor="end" font-size="12" font-weight="700" fill="#D97706" font-family="monospace">63%</text>';
     svg += '</svg>';
     host.innerHTML = svg;
   }

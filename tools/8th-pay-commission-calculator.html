@@ -34,7 +34,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=optional"/></noscript>
-<link rel="stylesheet" href="/assets/css/style.css?v=7"/>
+<link rel="stylesheet" href="/assets/css/style.css?v=8"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://paycalc.in/"},
@@ -162,10 +162,10 @@
         <div class="field">
           <label for="daRate">Current DA Rate (%)</label>
           <div class="input-suffix" style="max-width:160px">
-            <input type="number" id="daRate" data-calc inputmode="numeric" min="0" max="100" step="1" value="60"/>
+            <input type="number" id="daRate" data-calc inputmode="numeric" min="0" max="100" step="1" value="63"/>
             <span class="suffix">%</span>
           </div>
-          <p class="hint">60% effective January 2026.</p>
+          <p class="hint">63% effective July 2026.</p>
         </div>
 
         <div class="field toggle-row">
@@ -223,7 +223,7 @@
               </thead>
               <tbody>
                 <tr><td>Basic Pay</td><td id="rBasicCur"></td><td id="rBasicNew"></td><td id="rBasicDiff"></td></tr>
-                <tr><td id="daRateLabel">DA (60%)</td><td id="rDaCur"></td><td id="rDaNew"></td><td id="rDaDiff"></td></tr>
+                <tr><td id="daRateLabel">DA (63%)</td><td id="rDaCur"></td><td id="rDaNew"></td><td id="rDaDiff"></td></tr>
                 <tr id="rHraRow"><td>HRA</td><td id="rHraCur"></td><td id="rHraNew"></td><td id="rHraDiff"></td></tr>
                 <tr class="total-row"><td>Gross Pay</td><td id="rGrossCur"></td><td id="rGrossNew"></td><td id="rGrossDiff"></td></tr>
                 <tr id="rNpsRow"><td>NPS Deduction</td><td id="rNpsCur"></td><td id="rNpsNew"></td><td id="rNpsDiff"></td></tr>
@@ -252,9 +252,9 @@
     <h2 id="how-to-use">How to use this calculator</h2>
     <p>The calculator above needs one number you already know and one judgement call.</p>
     <ol>
-      <li><strong>Enter your current basic pay.</strong> This is the "Basic Pay" or "Pay in Pay Matrix" line on your payslip — not gross pay, and not Basic + DA. If your payslip shows ₹44,900 as basic and ₹26,940 as DA, enter 44,900.</li>
+      <li><strong>Enter your current basic pay.</strong> This is the "Basic Pay" or "Pay in Pay Matrix" line on your payslip — not gross pay, and not Basic + DA. If your payslip shows ₹44,900 as basic and ₹28,287 as DA, enter 44,900.</li>
       <li><strong>Pick a fitment factor.</strong> Nobody knows the real figure yet, so the calculator offers the three most-discussed scenarios: 2.57 (a repeat of the 7th CPC number), 2.86 (the figure demanded by the staff side of the National Council of the JCM), and 3.00 (optimistic). Run all three — the spread between them is your realistic range.</li>
-      <li><strong>Check the DA rate.</strong> It defaults to 60%, the rate effective January 2026. Change it only if you are modelling a different point in time.</li>
+      <li><strong>Check the DA rate.</strong> It defaults to 63%, the rate effective 1 July 2026 (approved by the Cabinet on 28 October 2026). Change it only if you are modelling a different point in time.</li>
       <li><strong>Set HRA and NPS.</strong> Choose your city class (X, Y or Z) and whether NPS is deducted from your salary. Employees who joined before 1 January 2004 are on the old pension scheme and should switch NPS off.</li>
     </ol>
     <p>Everything recalculates as you type, and nothing is sent anywhere — the arithmetic runs entirely in your browser.</p>
@@ -268,7 +268,7 @@
       <thead><tr><th>Measure</th><th class="num">Amount</th><th>What it tells you</th></tr></thead>
       <tbody>
         <tr><td>Current basic</td><td class="num">₹56,100</td><td>What the matrix says today</td></tr>
-        <tr><td>Current Basic + DA</td><td class="num">₹89,760</td><td>What you actually draw before allowances</td></tr>
+        <tr><td>Current Basic + DA</td><td class="num">₹91,443</td><td>What you actually draw before allowances</td></tr>
         <tr><td>Projected new basic (×2.86)</td><td class="num">₹1,60,446</td><td>Headline figure — looks like +186%</td></tr>
         <tr><td>Real monthly gain</td><td class="num">₹70,686</td><td>The honest increase: +79% over Basic + DA</td></tr>
       </tbody>
@@ -314,12 +314,12 @@
         <tr><td>Fit into new pay matrix cell</td><td>rounded to matrix</td><td class="num">≈ ₹1,60,500</td></tr>
       </tbody>
     </table>
-    <p>Why does the factor look so large when the "real" raise is smaller? Because it <strong>absorbs the Dearness Allowance</strong>. At the changeover, your 60% DA stops being paid separately — it is baked into the new basic. An employee at ₹56,100 basic already draws ₹89,760 as Basic + DA (56,100 × 1.60). A 2.86 factor produces ₹1,60,446 — so the genuine increase over Basic + DA is about 79%, not 186%.</p>
+    <p>Why does the factor look so large when the "real" raise is smaller? Because it <strong>absorbs the Dearness Allowance</strong>. At the changeover, your 63% DA stops being paid separately — it is baked into the new basic. An employee at ₹56,100 basic already draws ₹91,443 as Basic + DA (56,100 × 1.63). A 2.86 factor produces ₹1,60,446 — so the genuine increase over Basic + DA is about 75%, not 186%.</p>
     <p>For context, the 7th CPC's factor of 2.57 was derived from the 125% DA prevailing on 1 January 2016 (a factor of 2.25 merely to absorb DA) plus a real increase of about 14.3% <span class="cite">(<a href="https://doe.gov.in/central-pay-commission" rel="noopener" target="_blank">7th CPC Report, Chapter 5</a>)</span>. The National Council (Staff Side) of the Joint Consultative Machinery has demanded a factor of <strong>at least 2.86</strong> for the 8th CPC. Read the full breakdown in our <a href="/guides/fitment-factor-explained">fitment factor guide</a>.</p>
 
     <h2 id="why-lower">Why the fitment factor may be lower than you hope</h2>
     <p>Employee associations have anchored public expectations on 2.86. There are three reasons to hold that number loosely.</p>
-    <p><strong>The DA being absorbed is much smaller this time.</strong> The 7th CPC's 2.57 had to swallow 125% DA. A factor of 2.25 achieved nothing but neutralisation; the genuine raise was the remaining 14.3%. In 2026 the DA to be absorbed is roughly 60%, so neutralisation needs only about 1.60. A factor of 2.86 would therefore represent a real increase of about 79% — more than five times what the 7th CPC granted. No pay commission in independent India has awarded a real increase on that scale.</p>
+    <p><strong>The DA being absorbed is much smaller this time.</strong> The 7th CPC's 2.57 had to swallow 125% DA. A factor of 2.25 achieved nothing but neutralisation; the genuine raise was the remaining 14.3%. In 2026 the DA to be absorbed is roughly 63%, so neutralisation needs only about 1.63. A factor of 2.86 would therefore represent a real increase of about 79% — more than five times what the 7th CPC granted. No pay commission in independent India has awarded a real increase on that scale.</p>
     <p><strong>The fiscal arithmetic is unforgiving.</strong> The 7th CPC award cost the exchequer roughly ₹1.02 lakh crore in its first year, about 0.7% of GDP at the time. Scaling a comparable structure by a much larger real increase, across roughly 50 lakh employees and 65 lakh pensioners, produces a number the Ministry of Finance is unlikely to accept without modification. Governments have repeatedly accepted pay commission reports "with modifications" for exactly this reason.</p>
     <p><strong>History suggests moderation.</strong> The real increase granted was about 40% by the 6th CPC (helped by the introduction of grade pay) and 14.3% by the 7th. A figure between those two is a more defensible planning assumption than the union demand.</p>
     <div class="callout callout-warn">
@@ -327,8 +327,8 @@
     </div>
 
     <figure class="chart">
-      <img src="/assets/images/fitment-comparison.svg" alt="Bar chart showing the real pay increase implied by each fitment factor: 1.83 gives 14.3%, 2.00 gives 25%, 2.28 gives 42.5%, 2.57 gives 60.6% and 2.86 gives 78.8% over Basic plus DA." width="680" height="284" loading="lazy" decoding="async"/>
-      <figcaption>With DA at 60%, a factor of 1.60 is pure neutralisation. Only the excess above it is a genuine raise — which is why 2.57 would be a far larger award now than it was in 2016.</figcaption>
+      <img src="/assets/images/fitment-comparison.svg" alt="Bar chart showing the real pay increase implied by each fitment factor: 1.83 gives 12.3%, 2.00 gives 22.7%, 2.28 gives 39.9%, 2.57 gives 57.7% and 2.86 gives 75.5% over Basic plus DA." width="680" height="284" loading="lazy" decoding="async"/>
+      <figcaption>With DA at 63%, a factor of 1.63 is pure neutralisation. Only the excess above it is a genuine raise — which is why 2.57 would be a far larger award now than it was in 2016.</figcaption>
     </figure>
 
     <h2 id="pay-matrix">The expected 8th CPC pay matrix</h2>
@@ -357,23 +357,23 @@
     <p>Because the fitment factor is uniform, the <em>percentage</em> rise is identical at every level — but the rupee impact compounds with allowances:</p>
     <ul>
       <li><strong>Levels 1–5 (Group C):</strong> the minimum wage question dominates. At factor 2.86, Level 1 entry pay rises from ₹18,000 to ₹51,480. Unions argue the minimum should reflect the Aykroyd formula for a family's needs, the same argument made before the 7th CPC.</li>
-      <li><strong>Levels 6–9 (Group B):</strong> the largest cohort — inspectors, junior engineers, section officers in the states' field offices. A Level 6 employee at ₹35,400 sees Basic + DA of ₹56,640 today become a projected basic of ₹1,01,244 at 2.86.</li>
+      <li><strong>Levels 6–9 (Group B):</strong> the largest cohort — inspectors, junior engineers, section officers in the states' field offices. A Level 6 employee at ₹35,400 sees Basic + DA of ₹57,702 today become a projected basic of ₹1,01,244 at 2.86.</li>
       <li><strong>Levels 10–14 (Group A):</strong> officers additionally benefit because HRA and transport allowance are percentages or slabs tied to basic pay.</li>
       <li><strong>Levels 15–18 (senior officers):</strong> apex pay is expected to remain capped (₹2,50,000 under 7th CPC; roughly ₹6.4–7.5 lakh projected), keeping the compression ratio between the lowest and highest paid at around 1:13.9.</li>
     </ul>
 
     <h2 id="worked-examples">Worked examples across the matrix</h2>
-    <p>All figures below use fitment factor 2.86, DA at 60%, and a Y-class city at 20% HRA. "Real gain" compares projected new basic against current Basic + DA.</p>
+    <p>All figures below use fitment factor 2.86, DA at 63%, and a Y-class city at 20% HRA. "Real gain" compares projected new basic against current Basic + DA.</p>
     <div class="table-scroll">
     <table>
       <thead><tr><th>Post</th><th>Level</th><th class="num">Basic now</th><th class="num">Basic + DA</th><th class="num">New basic</th><th class="num">Real gain</th></tr></thead>
       <tbody>
-        <tr><td>Multi-Tasking Staff</td><td>1</td><td class="num">₹18,000</td><td class="num">₹28,800</td><td class="num">₹51,480</td><td class="num">₹22,680</td></tr>
-        <tr><td>Upper Division Clerk</td><td>4</td><td class="num">₹25,500</td><td class="num">₹40,800</td><td class="num">₹72,930</td><td class="num">₹32,130</td></tr>
-        <tr><td>Junior Engineer</td><td>6</td><td class="num">₹35,400</td><td class="num">₹56,640</td><td class="num">₹1,01,244</td><td class="num">₹44,604</td></tr>
-        <tr><td>Inspector (CBIC)</td><td>7</td><td class="num">₹44,900</td><td class="num">₹71,840</td><td class="num">₹1,28,414</td><td class="num">₹56,574</td></tr>
-        <tr><td>Group A entry (IAS)</td><td>10</td><td class="num">₹56,100</td><td class="num">₹89,760</td><td class="num">₹1,60,446</td><td class="num">₹70,686</td></tr>
-        <tr><td>Director</td><td>13</td><td class="num">₹1,23,100</td><td class="num">₹1,96,960</td><td class="num">₹3,52,066</td><td class="num">₹1,55,106</td></tr>
+        <tr><td>Multi-Tasking Staff</td><td>1</td><td class="num">₹18,000</td><td class="num">₹29,340</td><td class="num">₹51,480</td><td class="num">₹22,680</td></tr>
+        <tr><td>Upper Division Clerk</td><td>4</td><td class="num">₹25,500</td><td class="num">₹41,565</td><td class="num">₹72,930</td><td class="num">₹32,130</td></tr>
+        <tr><td>Junior Engineer</td><td>6</td><td class="num">₹35,400</td><td class="num">₹57,702</td><td class="num">₹1,01,244</td><td class="num">₹44,604</td></tr>
+        <tr><td>Inspector (CBIC)</td><td>7</td><td class="num">₹44,900</td><td class="num">₹73,187</td><td class="num">₹1,28,414</td><td class="num">₹56,574</td></tr>
+        <tr><td>Group A entry (IAS)</td><td>10</td><td class="num">₹56,100</td><td class="num">₹91,443</td><td class="num">₹1,60,446</td><td class="num">₹70,686</td></tr>
+        <tr><td>Director</td><td>13</td><td class="num">₹1,23,100</td><td class="num">₹2,00,653</td><td class="num">₹3,52,066</td><td class="num">₹1,55,106</td></tr>
       </tbody>
     </table>
     </div>
@@ -397,17 +397,17 @@
     <p><strong>Ignore fitment factors quoted as "confirmed".</strong> Nothing is confirmed until the commission submits its report, the Cabinet accepts it, and the Department of Expenditure issues a gazette notification. Any figure circulating before those three steps is a projection, including the ones on this page.</p>
 
     <h2 id="da-merger">The DA merger, explained</h2>
-    <p>Dearness Allowance (महंगाई भत्ता) is inflation compensation, revised every January and July based on the All-India Consumer Price Index for Industrial Workers (AICPI-IW) published by the Labour Bureau <span class="cite">(<a href="https://labourbureau.gov.in/" rel="noopener" target="_blank">Labour Bureau</a>)</span>. By January 2026 it stands at <strong>60% of basic pay</strong>.</p>
+    <p>Dearness Allowance (महंगाई भत्ता) is inflation compensation, revised every January and July based on the All-India Consumer Price Index for Industrial Workers (AICPI-IW) published by the Labour Bureau <span class="cite">(<a href="https://labourbureau.gov.in/" rel="noopener" target="_blank">Labour Bureau</a>)</span>. By January 2026 it stands at <strong>63% of basic pay</strong>.</p>
     <p>At every changeover, the commission merges the accumulated DA into the new basic and resets DA to 0%:</p>
     <table>
       <thead><tr><th>Changeover</th><th class="num">DA merged</th><th class="num">Fitment factor</th></tr></thead>
       <tbody>
         <tr><td>5th → 6th CPC (2006)</td><td class="num">74% (incl. dearness pay)</td><td class="num">1.86</td></tr>
         <tr><td>6th → 7th CPC (2016)</td><td class="num">125%</td><td class="num">2.57</td></tr>
-        <tr><td>7th → 8th CPC (2026)</td><td class="num">60% (expected)</td><td class="num">TBD</td></tr>
+        <tr><td>7th → 8th CPC (2026)</td><td class="num">63%</td><td class="num">TBD</td></tr>
       </tbody>
     </table>
-    <p>This is why comparing fitment factors across commissions is misleading: the 7th CPC's 2.57 absorbed 125 percentage points of DA, whereas the 8th CPC's factor only needs to absorb 60. A factor of 2.86 over 60% DA is a far bigger real raise than 2.57 was over 125% DA. Our <a href="/guides/da-dearness-allowance-guide">DA guide</a> has the full 2016–2026 history.</p>
+    <p>This is why comparing fitment factors across commissions is misleading: the 7th CPC's 2.57 absorbed 125 percentage points of DA, whereas the 8th CPC's factor only needs to absorb 60. A factor of 2.86 over 63% DA is a far bigger real raise than 2.57 was over 125% DA. Our <a href="/guides/da-dearness-allowance-guide">DA guide</a> has the full 2016–2026 history.</p>
 
     <h2 id="hra">What happens to HRA</h2>
     <p>House Rent Allowance currently runs at <strong>30% / 20% / 10%</strong> of basic pay for X, Y and Z class cities (having been restored upward as DA crossed the 25% and 50% thresholds per the 7th CPC formula <span class="cite">(<a href="https://doe.gov.in/orders-circulars" rel="noopener" target="_blank">DoE orders</a>)</span>). At the 7th CPC changeover, HRA was rationalised from 30/20/10 to 24/16/8 because the base (new basic pay) was much larger. Expect a similar rationalisation under the 8th CPC — the rupee amount still rises because the base multiplies. City classification rules are covered in the <a href="/guides/hra-rules-central-govt">HRA rules guide</a>, and you can compute today's HRA in the <a href="/tools/hra-calculator">HRA calculator</a>.</p>
@@ -422,7 +422,7 @@
       <li>Compute the monthly gain: revised basic − (current basic + DA actually drawn).</li>
       <li>Multiply by the number of months between January 2026 and the month salaries switch over.</li>
     </ol>
-    <p>Example: Level 7, basic ₹44,900, factor 2.86. Revised basic ≈ ₹1,28,414. Current Basic + DA = ₹71,840. Monthly gain ≈ ₹56,574. If implementation happens in May 2027 (17 months), gross arrears ≈ <strong>₹9.6 lakh</strong> — before adjusting for the DA instalments you would have received in the meantime, which reduce the net figure considerably. The 7th CPC arrears, by comparison, covered only 6 months (Jan–Jun 2016).</p>
+    <p>Example: Level 7, basic ₹44,900, factor 2.86. Revised basic ≈ ₹1,28,414. Current Basic + DA = ₹73,187. Monthly gain ≈ ₹56,574. If implementation happens in May 2027 (17 months), gross arrears ≈ <strong>₹9.6 lakh</strong> — before adjusting for the DA instalments you would have received in the meantime, which reduce the net figure considerably. The 7th CPC arrears, by comparison, covered only 6 months (Jan–Jun 2016).</p>
     <p>Arrears are taxable as salary in the year of receipt, but <strong>Section 89(1) relief</strong> lets you spread the tax burden back to the years the arrears relate to, claimed via Form 10E on the income-tax portal <span class="cite">(<a href="https://incometaxindia.gov.in/" rel="noopener" target="_blank">Income Tax Department</a>)</span>. Model your own timeline in the <a href="/tools/8th-cpc-arrears-calculator">Arrears Calculator</a>.</p>
 
     <h2 id="timeline">Implementation timeline — when will you actually see the money?</h2>
